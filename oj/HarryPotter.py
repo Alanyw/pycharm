@@ -9,7 +9,9 @@ magic_name = magic_name.split()
 magic_hurt = raw_input()
 magic_hurt = magic_hurt.split()
 step = 0
-magic_dict = dict(zip(magic_name, magic_hurt))
+magic_dict = {}
+for i in xrange(len(magic_hurt)):
+    magic_dict[magic_name[i]] = magic_hurt[i]
 while step < count:
     operation = raw_input()
     operation = operation.split()
